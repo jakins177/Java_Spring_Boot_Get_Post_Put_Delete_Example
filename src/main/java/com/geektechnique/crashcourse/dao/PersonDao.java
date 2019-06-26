@@ -2,6 +2,7 @@ package com.geektechnique.crashcourse.dao;
 
 import com.geektechnique.crashcourse.model.Person;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface PersonDao {
@@ -13,4 +14,6 @@ public interface PersonDao {
         return insertPerson(id, person);
 
     }
+
+    List<Person> selectAllPeople();
 }
