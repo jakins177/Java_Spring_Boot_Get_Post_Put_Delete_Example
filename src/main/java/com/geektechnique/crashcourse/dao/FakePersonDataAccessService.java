@@ -33,11 +33,11 @@ public class FakePersonDataAccessService implements PersonDao {
 
     @Override
     public int deletePersonById(UUID id) {
-        Optional<Person> personMabye = selectPersonById(id);
-//        if(personMabye.isEmpty()){ I'm using java 8, this requires 11
+        Optional<Person> personMaybe = selectPersonById(id);
+//        if(personMaybe.isEmpty()){ //I'm using java 8, this requires 11
 //            return 0;
 //        }
-        DB.remove(personMabye.get());
+        DB.remove(personMaybe.get());
         return 1;
     }
 
@@ -47,7 +47,7 @@ public class FakePersonDataAccessService implements PersonDao {
                 .map(p ->{
                     int indexOfPersonToUpdate = DB.indexOf(p);
                     if(indexOfPersonToUpdate >= 0){
-                        DB.set(indexOfPersonToUpdate, new Person(id, update.getName());
+                        DB.set(indexOfPersonToUpdate, new Person(id, update.getName()));
                         return 1;
                     }
                     return 0;
