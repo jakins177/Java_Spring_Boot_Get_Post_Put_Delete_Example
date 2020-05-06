@@ -1,6 +1,6 @@
 # Java_Spring_Boot_Get_Post_Put_Delete_Example
 
-A working example of developing end-points with Spring Boot using a test end memory database, the endpoints can be tested with
+A working example of developing end-points with Spring Boot using a test in memory database, the endpoints can be tested with
 postman:
 https://www.postman.com/
 
