@@ -43,7 +43,7 @@ public class PersonController {
         personService.deletePerson(id);
     }
 
-    @PutMapping
+    @PutMapping(path = "{id}")
     public void updatePerson(@PathVariable("id") UUID id, @Valid @NonNull @RequestBody Person person){
         personService.updatePerson(id, person);
     }
